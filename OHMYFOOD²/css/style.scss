@@ -1,0 +1,291 @@
+@import "header";
+@import "mixins";
+@import "footer";
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+p { 
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --first-color: #9356DC;
+    --second-color: #FF79DA;
+    --third-color: #99E2D0;
+    --degrad: linear-gradient(to top, var(--first-color), var(--second-color));
+}
+
+
+
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0;
+        width: auto;
+        background-color: #F3F3F3;
+    }
+
+
+    h6 {
+        font-size: 16px; 
+        font-weight: 500; 
+        line-height: 18.75px; 
+        text-align: left;
+        color:  #353535;
+        font-family: Roboto;
+    }
+
+
+
+    .explore {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        .explore__title {
+            margin: 39px 42px 0px 42px;
+            width: auto;
+            height: 68px;
+            display: flex;
+            justify-content: center;
+        }
+        .explore__subtitle {
+            margin: 0px 34px 27px 34px;
+            height: 46px;
+
+            
+        }
+        /* A modif */
+        .explore__button {
+            display: flex;
+            margin: 0px 82px 57px 82px;
+            justify-content: center;
+            align-items: center;
+            width: 218px;
+            height: 50px;
+            border-radius: 25px;
+            border: 1px transparent;
+            background: var(--degrad);
+            box-shadow: 0px 4px 15px 0px #00000026;
+
+        }
+
+        .explore__button:hover {
+         background: lighten
+        }
+
+
+        a {
+            color: white;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18.75px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+
+    .fonctionnement {
+        width: 100%;
+        height: 440px;
+        background-color: white;
+        h2 {
+            width: 100%;
+            height: 31px;
+            margin: 48px 20px 26px 20px;
+        }
+        .fonctionnement__logos {
+            margin-right: 22px;
+        }
+        .fonctionnement__etape1 {
+            @include fonctionnement-etapes-num;
+            top: 531.86px;
+        }
+        .fonctionnement__etape2 {
+            @include fonctionnement-etapes-num;
+            top: 629.17px;
+        }
+        .fonctionnement__etape3 {
+            @include fonctionnement-etapes-num;
+            top: 726.48px;
+        }
+    
+        
+        .fonctionnement__carte-un, .fonctionnement__carte-deux, .fonctionnement__carte-trois {
+            margin: 0px 32.5px 25px 32.5px;
+            height: 72.38px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+            background-color: #F6F6F6;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            color: black;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18.75px;
+                .fonctionnement__cartes-texte {
+                    display: flex;
+                }
+            
+        }
+        
+    }
+    
+    
+    #restaurants {
+        margin: 54px 20px 17px 20px;
+    }    
+
+    .restaurants {
+        display: flex;
+        flex-direction: column;
+        .restaurants__cartes {
+            @include restaurants-cartes-design;
+                .restaurants__cartes--images {
+                    @include restaurants-images;
+                }
+                .restaurants__cartes--texte {
+                    width: 85%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px 0px 10px 13px;
+                    gap: 5px;
+                        h4 {
+                            font-family: Roboto;
+                            font-size: 18px;
+                            font-weight: 700;
+                            line-height: 21.09px;
+                            text-align: left;
+                            
+                        }
+                        p {
+                            font-family: Roboto;
+                            font-size: 17px;
+                            font-weight: 300;
+                            line-height: 19.92px;
+                            text-align: left;
+                        }
+                }
+                .restaurants__cartes--like {
+                    display: flex;
+                    align-self: center;
+                    position: relative;
+                    .coeur-vide {
+                        position: absolute;
+                        top: 0px;
+                    }
+                    .coeur-plein {
+                        opacity: 0;
+                        transition-property: all;
+                        transition-duration: 1s;
+                    }
+                    .coeur-plein:hover {
+                        opacity: 1;
+                        background: linear-gradient(#9356DC, #DD79DA);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
+                }
+                .restaurants__cartes--nouveau1 {
+                    @include restaurants-cartes-nouveau;
+                    top: 957px;
+                }
+                .restaurants__cartes--nouveau2 {
+                    @include restaurants-cartes-nouveau;
+                    top: 1226px;
+                }
+        }
+
+    }
+@media (min-width: 1024px) {
+    
+    .explore {
+        .explore__button {
+            margin: 0px 82px 30px 82px;
+        }
+        .explore__subtitle {
+            margin: 0px 34px 6px 34px;
+        }
+    }
+    .fonctionnement {
+        width: auto;
+        height: 128.38px;
+        padding: 50px 180px 50px 180px;
+        gap: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 25px;
+        justify-content: space-around;
+
+        .fonctionnement__etape1 {
+            top: 24.19px;
+            left: -13px;
+        }
+        .fonctionnement__etape2 {
+            top: 24.19px;
+            left: -13px;
+        }
+        .fonctionnement__etape3 {
+            top: 24.19px;
+            left: -13px;
+        }
+        .fonctionnement__carte-un, .fonctionnement__carte-deux, .fonctionnement__carte-trois {
+            width: 30%;
+            margin: 0 0 0 0;
+            position: relative;
+        }
+        h2 {
+            margin: 0 0 0 0;
+        }
+        
+        .fonctionnement__logos {
+            color: #7E7E7E;
+        }
+    }
+
+    #restaurants {
+        margin: 30px 20px 17px 0px;
+        width: 100%;
+    } 
+    .restaurants {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 180px 0px 180px;
+        justify-content: space-between;
+        .restaurants__cartes {
+            width: 46%;
+            margin: 0 0 50px 0;
+            position: relative;
+            .restaurants__cartes--nouveau1 {
+                @include restaurants-cartes-nouveau;
+                top: 13px;
+                right: 13px;
+                
+            }
+            .restaurants__cartes--nouveau2 {
+                @include restaurants-cartes-nouveau;
+                top: 13px;
+                right: 13px;
+            }
+            .restaurants__cartes--images {
+                @include restaurants-images;
+                
+            }
+        }
+    }
+    
+}

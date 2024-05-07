@@ -1,0 +1,452 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 113px;
+  flex-direction: column;
+}
+.header .header__up {
+  width: 100%;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  background-color: white;
+}
+.header .header__up .header__logo {
+  width: 197px;
+  height: 36px;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+.header .header__down {
+  background: #EAEAEA;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 146px;
+  }
+  .header .header__up {
+    box-shadow: none;
+    height: 96px;
+  }
+  .header .header__down {
+    box-shadow: none;
+  }
+}
+.footer {
+  height: 142px;
+  background-color: #353535;
+  padding: 22px 25px 22px 25px;
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .footer__logo {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 26.24px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.footer .footer__txt1, .footer .footer__txt2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .footer__txt1 .footer__txt--link, .footer .footer__txt2 .footer__txt--link {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  display: flex;
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse;
+    margin: 0 0 0 0;
+    padding: 30px 25px 30px 25px;
+    height: 54px;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+  .footer .footer__txt1 {
+    order: 2;
+    flex-direction: row;
+  }
+  .footer .footer__txt2 {
+    order: 1;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .footer .footer__logo {
+    margin: 0 50px 0 45px;
+  }
+}
+/****** General ***********/
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --first-color: #9356DC;
+  --second-color: #FF79DA;
+  --third-color: #99E2D0;
+  --degrad: linear-gradient(to top, var(--first-color), var(--second-color));
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 0;
+  width: auto;
+  background-color: #F3F3F3;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  color: #353535;
+  font-family: Roboto;
+}
+
+.explore {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  /* A modif */
+}
+.explore .explore__title {
+  margin: 39px 42px 0px 42px;
+  width: auto;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+}
+.explore .explore__subtitle {
+  margin: 0px 34px 27px 34px;
+  height: 46px;
+}
+.explore .explore__button {
+  display: flex;
+  margin: 0px 82px 57px 82px;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px transparent;
+  background: var(--degrad);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.explore .explore__button:hover {
+  background: lighten;
+}
+.explore a {
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fonctionnement {
+  width: 100%;
+  height: 440px;
+  background-color: white;
+}
+.fonctionnement h2 {
+  width: 100%;
+  height: 31px;
+  margin: 48px 20px 26px 20px;
+}
+.fonctionnement .fonctionnement__logos {
+  margin-right: 22px;
+}
+.fonctionnement .fonctionnement__etape1 {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: #9356DC;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  left: 20px;
+  top: 531.86px;
+}
+.fonctionnement .fonctionnement__etape2 {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: #9356DC;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  left: 20px;
+  top: 629.17px;
+}
+.fonctionnement .fonctionnement__etape3 {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: #9356DC;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  left: 20px;
+  top: 726.48px;
+}
+.fonctionnement .fonctionnement__carte-un, .fonctionnement .fonctionnement__carte-deux, .fonctionnement .fonctionnement__carte-trois {
+  margin: 0px 32.5px 25px 32.5px;
+  height: 72.38px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  background-color: #F6F6F6;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: black;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+}
+.fonctionnement .fonctionnement__carte-un .fonctionnement__cartes-texte, .fonctionnement .fonctionnement__carte-deux .fonctionnement__cartes-texte, .fonctionnement .fonctionnement__carte-trois .fonctionnement__cartes-texte {
+  display: flex;
+}
+
+#restaurants {
+  margin: 54px 20px 17px 20px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .restaurants__cartes {
+  height: 251px;
+  border-radius: 15px;
+  background-color: white;
+  margin: 0px 17px 18px 17px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--images {
+  height: 176px;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--texte {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 13px;
+  gap: 5px;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--texte h4 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+  text-align: left;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--texte p {
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19.92px;
+  text-align: left;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like {
+  display: flex;
+  align-self: center;
+  position: relative;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-vide {
+  position: absolute;
+  top: 0px;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-plein {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-plein:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC, #DD79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--nouveau1 {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 8px;
+  border-radius: 2px;
+  position: absolute;
+  right: 32px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  text-align: center;
+  top: 957px;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--nouveau2 {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 8px;
+  border-radius: 2px;
+  position: absolute;
+  right: 32px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  text-align: center;
+  top: 1226px;
+}
+
+@media (min-width: 1024px) {
+  .explore .explore__button {
+    margin: 0px 82px 30px 82px;
+  }
+  .explore .explore__subtitle {
+    margin: 0px 34px 6px 34px;
+  }
+  .fonctionnement {
+    width: auto;
+    height: 128.38px;
+    padding: 50px 180px 50px 180px;
+    gap: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    justify-content: space-around;
+  }
+  .fonctionnement .fonctionnement__etape1 {
+    top: 24.19px;
+    left: -13px;
+  }
+  .fonctionnement .fonctionnement__etape2 {
+    top: 24.19px;
+    left: -13px;
+  }
+  .fonctionnement .fonctionnement__etape3 {
+    top: 24.19px;
+    left: -13px;
+  }
+  .fonctionnement .fonctionnement__carte-un, .fonctionnement .fonctionnement__carte-deux, .fonctionnement .fonctionnement__carte-trois {
+    width: 30%;
+    margin: 0 0 0 0;
+    position: relative;
+  }
+  .fonctionnement h2 {
+    margin: 0 0 0 0;
+  }
+  .fonctionnement .fonctionnement__logos {
+    color: #7E7E7E;
+  }
+  #restaurants {
+    margin: 30px 20px 17px 0px;
+    width: 100%;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 180px 0px 180px;
+    justify-content: space-between;
+  }
+  .restaurants .restaurants__cartes {
+    width: 46%;
+    margin: 0 0 50px 0;
+    position: relative;
+  }
+  .restaurants .restaurants__cartes .restaurants__cartes--nouveau1 {
+    background-color: #99E2D0;
+    color: #1b6150;
+    padding: 8px;
+    border-radius: 2px;
+    position: absolute;
+    right: 32px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    text-align: center;
+    top: 13px;
+    right: 13px;
+  }
+  .restaurants .restaurants__cartes .restaurants__cartes--nouveau2 {
+    background-color: #99E2D0;
+    color: #1b6150;
+    padding: 8px;
+    border-radius: 2px;
+    position: absolute;
+    right: 32px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    text-align: center;
+    top: 13px;
+    right: 13px;
+  }
+  .restaurants .restaurants__cartes .restaurants__cartes--images {
+    height: 176px;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}/*# sourceMappingURL=style.css.map */
