@@ -113,7 +113,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: 40.82px;
-  text-align: center;
+  text-align: left;
   width: 85%;
 }
 .conteneur .conteneur__choix--titre {
@@ -132,6 +132,7 @@
   position: absolute;
   top: 20px;
   right: -10px;
+  font-size: 25px;
 }
 .conteneur .coeur-plein {
   opacity: 0;
@@ -140,10 +141,16 @@
 }
 .conteneur .coeur-plein:hover {
   opacity: 1;
-  color: #9356DC;
+  background: linear-gradient(#9356DC, #DD79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .conteneur .coeur-vide {
   opacity: 1;
+}
+.conteneur .coeur-vide:hover {
+  opacity: 0;
 }
 .conteneur .conteneur__choix--bloc {
   display: flex;
@@ -285,8 +292,11 @@
   .conteneur .conteneur__choix--titre h1 {
     width: auto;
   }
-  .conteneur .fa-heart {
-    position: absolute;
-    left: 75%;
+  .conteneur .conteneur__choix--titre .coeurs {
+    position: relative;
+  }
+  .conteneur .conteneur__choix--titre .coeurs .fa-heart {
+    left: 30px;
+    top: 7px;
   }
 }/*# sourceMappingURL=la-palette-a-du-gout.css.map */

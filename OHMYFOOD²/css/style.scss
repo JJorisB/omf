@@ -185,6 +185,11 @@ p {
                         position: absolute;
                         top: 0px;
                     }
+                    .coeur-vide:hover {
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0;
+                    }
                     .coeur-plein {
                         opacity: 0;
                         transition-property: all;
@@ -196,6 +201,9 @@ p {
                         background-clip: text;
                         -webkit-background-clip: text;
                         color: transparent;
+                    }
+                    .fa-heart {
+                        font-size: 25px;
                     }
                 }
                 .restaurants__cartes--nouveau1 {

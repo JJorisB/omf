@@ -275,6 +275,8 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  text-decoration: none;
+  color: black;
 }
 .restaurants .restaurants__cartes .restaurants__cartes--images {
   height: 176px;
@@ -313,6 +315,11 @@ h6 {
   position: absolute;
   top: 0px;
 }
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-vide:hover {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
 .restaurants .restaurants__cartes .restaurants__cartes--like .coeur-plein {
   opacity: 0;
   transition-property: all;
@@ -324,6 +331,9 @@ h6 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like .fa-heart {
+  font-size: 25px;
 }
 .restaurants .restaurants__cartes .restaurants__cartes--nouveau1 {
   background-color: #99E2D0;

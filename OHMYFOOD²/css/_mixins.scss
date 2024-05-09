@@ -13,6 +13,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    text-decoration: none;
+    color: black;
 }
 
 @mixin restaurants-images {

@@ -122,7 +122,7 @@
             font-style: italic;
             font-weight: 400;
             line-height: 40.82px;
-            text-align: center;
+            text-align: left;
             width: 85%;
 
         }
@@ -143,6 +143,7 @@
             position: absolute;
             top: 20px;
             right: -10px;
+            font-size: 25px;
         }
         .coeur-plein {          
             opacity: 0;
@@ -151,12 +152,17 @@
         }
         .coeur-plein:hover {          
             opacity: 1;
-            color: #9356DC;
-
+            background: linear-gradient(#9356DC, #DD79DA);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
         .coeur-vide {
             opacity: 1;
+        }
+        .coeur-vide:hover {
+            opacity: 0;
         }
 
 
@@ -320,13 +326,16 @@
             h1 {
                 width: auto;
             }
+            .coeurs {
+                position: relative;
+                .fa-heart {
+                    left: 30px;
+                    top: 7px;
+                }
+            }
 
         }
-        .fa-heart {
-            position: absolute;
-            left: 75%;
-
-        }
+        
 
     }    
 }    
