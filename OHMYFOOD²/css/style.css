@@ -118,6 +118,7 @@ p {
   --second-color: #FF79DA;
   --third-color: #99E2D0;
   --degrad: linear-gradient(to top, var(--first-color), var(--second-color));
+  --degrad2: linear-gradient(to top, #b876e1, #ea86e1);
 }
 
 body {
@@ -130,6 +131,59 @@ body {
   background-color: #F3F3F3;
 }
 
+@keyframes jump-dots {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes loader {
+  100% {
+    z-index: -9999;
+    opacity: 0;
+  }
+}
+.loader {
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  background: #F6F6F6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+}
+.loader .pnt-un {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--first-color);
+  margin: 0 15px;
+  animation: jump-dots infinite 0.3s alternate;
+}
+.loader .pnt-deux {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--first-color);
+  margin: 0 15px;
+  animation: jump-dots infinite 0.3s alternate;
+  animation-delay: 0.1s;
+}
+.loader .pnt-trois {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--first-color);
+  margin: 0 15px;
+  animation: jump-dots infinite 0.3s alternate;
+  animation-delay: 0.2s;
+}
+
 h6 {
   font-size: 16px;
   font-weight: 500;
@@ -140,7 +194,7 @@ h6 {
 }
 
 .explore {
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: center;
   text-align: center;
@@ -167,11 +221,15 @@ h6 {
   height: 50px;
   border-radius: 25px;
   border: 1px transparent;
-  background: var(--degrad);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(221, 121, 218, 0.9) 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  transition-duration: 0.25s;
 }
 .explore .explore__button:hover {
-  background: lighten;
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 .explore a {
   color: white;
@@ -184,12 +242,12 @@ h6 {
 }
 
 .fonctionnement {
-  width: 100%;
+  width: auto;
   height: 440px;
   background-color: white;
 }
 .fonctionnement h2 {
-  width: 100%;
+  width: 90%;
   height: 31px;
   margin: 48px 20px 26px 20px;
 }
@@ -310,27 +368,75 @@ h6 {
   display: flex;
   align-self: center;
   position: relative;
+  /*
+  .groupes {
+      display: block;
+  }
+  .groupes:hover .hover-visible {
+      display: block;
+
+  }
+  .groupes:hover .hover-invisible {
+      display: none;
+  }
+
+  .coeur-vide {
+
+  }
+
+  .coeur-plein {
+      display: none;
+
+  }
+
+  */
+  /*
+  .coeur-vide {
+      position: absolute;
+      top: 0px;
+      opacity: 1;
+  }
+  .coeur-vide:hover {
+      position: absolute;
+      top: 0px;
+      opacity: 0;
+  }
+  .coeur-plein {
+      opacity: 0;
+      transition-property: all;
+      transition-duration: 1s;
+  }
+  .coeur-plein:hover {
+      opacity: 1;
+      background: linear-gradient(#9356DC, #DD79DA);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+  }
+  */
 }
-.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-vide {
-  position: absolute;
-  top: 0px;
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeurs {
+  position: relative;
 }
-.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-vide:hover {
-  position: absolute;
-  top: 0px;
-  opacity: 0;
-}
-.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-plein {
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 1s;
-}
-.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-plein:hover {
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeurs:hover .hover-visible {
   opacity: 1;
+  transition: opacity 1s ease, visibility 1s ease;
   background: linear-gradient(#9356DC, #DD79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeurs:hover .hover-invisible {
+  transition: opacity 1s ease, visibility 1s ease;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-vide {
+  position: absolute;
+  top: -20px;
+}
+.restaurants .restaurants__cartes .restaurants__cartes--like .coeur-plein {
+  position: absolute;
+  opacity: 0;
+  top: -20px;
 }
 .restaurants .restaurants__cartes .restaurants__cartes--like .fa-heart {
   font-size: 25px;

@@ -98,14 +98,22 @@
 }
 .conteneur .conteneur__choix .div-conteneur__bouton .conteneur__bouton {
   display: flex;
-  margin: 0px 0px 40px 0px;
+  margin: 0px 82px 57px 82px;
   justify-content: center;
+  align-items: center;
   width: 218px;
   height: 50px;
   border-radius: 25px;
   border: 1px transparent;
-  background: linear-gradient(to top, var(--first-color), var(--second-color));
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(221, 121, 218, 0.9) 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  transition-duration: 0.25s;
+}
+.conteneur .conteneur__choix .div-conteneur__bouton .conteneur__bouton:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 .conteneur h1 {
   font-family: Shrikhand;
@@ -114,7 +122,7 @@
   font-weight: 400;
   line-height: 40.82px;
   text-align: left;
-  width: 85%;
+  width: 90%;
 }
 .conteneur .conteneur__choix--titre {
   display: flex;
@@ -124,33 +132,32 @@
   margin-right: 33px;
   position: relative;
 }
-.conteneur .conteneur__choix--titre i {
-  display: flex;
-  align-self: center;
-}
-.conteneur .fa-heart {
+.conteneur .conteneur__choix--titre .coeurs i {
   position: absolute;
-  top: 20px;
-  right: -10px;
+  top: 5px;
   font-size: 25px;
 }
-.conteneur .coeur-plein {
+.conteneur .conteneur__choix--titre .coeurs .coeur-plein {
   opacity: 0;
   transition-property: all;
   transition-duration: 1s;
 }
-.conteneur .coeur-plein:hover {
+.conteneur .conteneur__choix--titre .coeurs .coeur-plein:hover {
   opacity: 1;
   background: linear-gradient(#9356DC, #DD79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.conteneur .coeur-vide {
+.conteneur .conteneur__choix--titre .coeurs .coeur-vide {
   opacity: 1;
 }
-.conteneur .coeur-vide:hover {
+.conteneur .conteneur__choix--titre .coeurs .coeur-vide:hover {
   opacity: 0;
+}
+.conteneur .conteneur__choix--titre i {
+  display: flex;
+  align-self: center;
 }
 .conteneur .conteneur__choix--bloc {
   display: flex;
@@ -180,7 +187,7 @@
   overflow: hidden;
 }
 .conteneur .conteneur__choix--bloc .bloc__carte:hover .bloc__carte--prix {
-  transform: translateX(0px);
+  margin-right: 0px;
 }
 .conteneur .conteneur__choix--bloc .bloc__carte:hover .bloc__carte--prix .animation .check {
   transform: rotate(1turn);
@@ -188,8 +195,8 @@
 .conteneur .conteneur__choix--bloc .bloc__carte .bloc__carte--prix {
   display: flex;
   flex-direction: row;
-  transform: translateX(55px);
   transition: all 0.7s;
+  margin-right: -55px;
 }
 .conteneur .conteneur__choix--bloc .bloc__carte .bloc__carte--prix p {
   display: flex;
@@ -222,7 +229,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .conteneur .conteneur__choix--bloc .bloc__carte .bloc__carte--texte h5 {
   font-family: Roboto;

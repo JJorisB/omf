@@ -25,6 +25,11 @@
   </head>
 
   <body>
+    <div class="loader">
+      <div class="pnt-un"></div>
+      <div class="pnt-deux"></div>
+      <div class="pnt-trois"></div>
+    </div>
     <header class="header">
       <div class="header__up">
         <img
@@ -39,13 +44,13 @@
       </div>
     </header>
 
-    <body>
+    <body>     
       <section class="explore">
         <h2 class="explore__title">Réservez le menu qui vous convient</h2>
         <p class="explore__subtitle">
           Découvrez des restaurants d’exception, sélectionnés par nos soins.
         </p>
-        <a class="explore__button" href="#restauants">Explorer nos restaurants</a>
+        <a class="explore__button" href="#restaurants">Explorer nos restaurants</a>
       </section>
       <section class="fonctionnement">
         <h2>Fonctionnement</h2>       
@@ -81,8 +86,10 @@
             <p>Ménilmontant</p>
           </div>
           <div class="restaurants__cartes--like">
-            <i class="far fa-heart coeur-vide"></i>
-            <i class="fas fa-heart coeur-plein"></i>
+            <div class="coeurs">
+              <i class="far fa-heart coeur-vide hover-invisible"></i>
+              <i class="fas fa-heart coeur-plein hover-visible"></i>
+            </div>
           </div>
       </a>
       <a href="./la-note-enchantee.html" class="restaurants__cartes">
@@ -97,8 +104,10 @@
             <p>Charonne</p>
           </div>
           <div class="restaurants__cartes--like">
-            <i class="far fa-heart coeur-vide"></i>
-            <i class="fas fa-heart coeur-plein"></i>
+            <div class="coeurs">
+              <i class="far fa-heart coeur-vide hover-invisible"></i>
+              <i class="fas fa-heart coeur-plein hover-visible"></i>
+            </div>
           </div>
         </a>
         <a href="./a-la-francaise.html" class="restaurants__cartes">
@@ -112,8 +121,10 @@
             <p>Cité Rouge</p>
           </div>
           <div class="restaurants__cartes--like">
-            <i class="far fa-heart coeur-vide"></i>
-            <i class="fas fa-heart coeur-plein"></i>
+            <div class="coeurs">
+              <i class="far fa-heart coeur-vide hover-invisible"></i>
+              <i class="fas fa-heart coeur-plein hover-visible"></i>
+            </div>
           </div>
         </a>
         <a href="./Le-delice-des-sens.html" class="restaurants__cartes">
@@ -127,8 +138,10 @@
             <p>Folie-Méricourt</p>
           </div>
           <div class="restaurants__cartes--like">
-            <i class="far fa-heart coeur-vide"></i>
-            <i class="fas fa-heart coeur-plein"></i>
+            <div class="coeurs">
+              <i class="far fa-heart coeur-vide hover-invisible"></i>
+              <i class="fas fa-heart coeur-plein hover-visible"></i>
+            </div>
           </div>
         </a>
       </section>
