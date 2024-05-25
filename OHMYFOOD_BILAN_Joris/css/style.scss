@@ -21,7 +21,7 @@ p {
 
 
 
-    body {
+    .body {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -180,6 +180,9 @@ p {
             @include fonctionnement-etapes-num;
             top: 726.48px;
         }
+        .fonctionnement__logos {
+            color: #7E7E7E;
+        }
     
         
         .fonctionnement__carte-un, .fonctionnement__carte-deux, .fonctionnement__carte-trois {
@@ -280,7 +283,7 @@ p {
                     }
 
                     .anim {
-                        transition: opacity 1s ease, visibility 1s ease;
+                        transition: opacity 1s ease;
                     }
 
                     .coeur-vide {
@@ -379,9 +382,7 @@ p {
             margin: 0 0 0 0;
         }
         
-        .fonctionnement__logos {
-            color: #7E7E7E;
-        }
+        
     }
 
     #restaurants {
