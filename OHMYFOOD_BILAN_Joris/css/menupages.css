@@ -9,6 +9,11 @@
   --third-color: #99E2D0;
 }
 
+@keyframes anim-menu {
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   height: 63px;
   background-color: white;
@@ -162,11 +167,30 @@
   display: flex;
   align-self: center;
 }
+.conteneur .anim-menu1 {
+  animation: anim-menu 1s;
+  transition: opacity ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.conteneur .anim-menu2 {
+  animation: anim-menu 1s;
+  transition: opacity ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+.conteneur .anim-menu3 {
+  animation: anim-menu 1s;
+  transition: opacity ease;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
 .conteneur .conteneur__choix--bloc {
   display: flex;
   gap: 12px;
   flex-direction: column;
   margin-bottom: 40px;
+  opacity: 0;
 }
 .conteneur .conteneur__choix--bloc h3 {
   height: 27px;
