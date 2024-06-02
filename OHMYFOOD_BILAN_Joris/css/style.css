@@ -132,6 +132,16 @@ p {
   background-color: #F3F3F3;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 0;
+  width: auto;
+  background-color: #F3F3F3;
+}
+
 @keyframes jump-dots {
   100% {
     transform: translateY(-30px);
@@ -165,6 +175,7 @@ p {
   background: var(--first-color);
   margin: 0 15px;
   animation: jump-dots infinite 0.3s alternate;
+  animation-delay: 0.1s;
 }
 .loader .pnt-deux {
   width: 50px;
@@ -173,7 +184,7 @@ p {
   background: var(--first-color);
   margin: 0 15px;
   animation: jump-dots infinite 0.3s alternate;
-  animation-delay: 0.1s;
+  animation-delay: 0.2s;
 }
 .loader .pnt-trois {
   width: 50px;
@@ -182,7 +193,7 @@ p {
   background: var(--first-color);
   margin: 0 15px;
   animation: jump-dots infinite 0.3s alternate;
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 
 h6 {
